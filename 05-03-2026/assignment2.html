@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>
+Assignment no 2 
+</title>
+
+<style>
+  #output{
+  margin : 10px;
+  color:red;
+  }
+</style>
+<head>
+
+<body>
+  
+  
+  <div style="display:inline">
+  <input type="text" id="input"> 
+  
+  <span>from</span>  
+  <select id="from">
+  <option value = "Rupee">Rupee</option>
+  <option value = "Dollar">Dollar</option>
+  <option value = "Euro">Euro</option>
+  </select>
+  
+  <span>To</span>
+  <select id="to">
+  <option value ="Rupee">Rupee</option>
+  <option value ="Dollar">Dollar</option>
+  <option value ="Euro">Euro</option>
+  </select>  
+  </div>
+  
+  <button type="button" onclick = "convert()">Convert</button>
+  <fieldset>
+  <legend>Output</legend>
+   <div>
+    <p id="output"><p>
+   </div>
+  </fieldset>
+ 
+
+ <script type="text/javascript">
+  
+ 
+ function convert(){
+  var output = document.getElementById("output");
+  var from = document.getElementById("from");
+  var to = document.getElementById("to");
+  var input = document.getElementById("input").value;
+  var value;  
+
+
+  const RuppeForDollar = 91.93;
+  const RuppeForEuro = 106.83;
+  const EuroForDollar = 0.86;
+  const DollarForEuro = 1.16;
+  
+  
+ 
+  
+  if(from.value == "Rupee" && to.value == "Dollar"){
+    value = input / RuppeForDollar;
+	output.innerText = input + " Rs Equal To " +value.toFixed(2) + " $ Dollar";
+  }else if(from.value == "Rupee" && to.value == "Euro"){
+    value = input / RuppeForEuro;
+	output.innerText = input + " Rs Equal To " +  value.toFixed(2) + " € Euro";
+  }else if(from.value == "Dollar" && to.value == "Rupee"){
+    value = input * RuppeForDollar;
+	output.innerText = input +" $ Dollar " + " Equal To" + value.toFixed(2) + "Rs";
+  }else if(from.value == "Dollar" && to.value == "Euro"){
+    value = input * EuroForDollar;
+    output.innerText = input + " $ Dollar Equals to " + value.toFixed(2) + " € Euro";
+  }else if(from.value == "Euro" && to.value == "Rupee"){
+    value = input * RuppeForEuro;
+	output.innerText = input + " € Euro Equals to " + value.toFixed(2) + " Rs ";
+  }else if(from.value == "Euro" && to.value == "Dollar"){
+    value = input * DollarForRuppe;
+	output.innerText = input + " € Euro Equals to " + value.toFixed(2) + " $ Dollar";
+  }else {
+    output.innerText = "Please Select Correct Conversion format";
+  };
+  };
+  </script>
+</body>
+</html>

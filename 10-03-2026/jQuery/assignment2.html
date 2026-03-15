@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Assignment no 1</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+       
+       
+      $(document).ready(function (){
+       $("#btn").click(function(){
+        let number = $(":text").val(); //5
+        let fact = 1;
+         for(var i = 1 ; i <= number ; i++)
+         {
+             fact = fact * i;
+         }
+         $("#p1").html = "Factorial of the given number is :" + fact; 
+       }); 
+      });
+
+    </script>
+    </head>
+
+    <body>
+        <input type="text" id="input"/>
+        <button type="button" id="btn">On Change</button>
+        <p id="p1"> </p>    
+    </body>
+</html>

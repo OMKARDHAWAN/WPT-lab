@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Assignment no 1</title>
+    </head>
+    <body>
+        <!-- 1) create login.html 
+    
+	accept username and password from user 
+
+perform validation for both textfield 
+
+	i) textfield should contain data 
+	ii) length of password should between 8 to 12 characters 
+
+if username == iet and password == iet 
+
+then forward control to Home.html  -->
+ <div>
+    <form name="form" onsubmit="return validate()" action="home.html">
+        Username : <input type="text" name="username" />
+        Password : <input type="password" name="password"/>
+    <button type="submit" >Submit</button>
+    </form>
+    <form></form>
+ </div>
+ 
+<script type="text/javascript">
+ 
+
+ function validate(){
+     let usernamev,passwordv;
+     var username = document.forms["form"]["username"].value;
+     var password = document.forms.form.password.value;
+   
+
+ if(username.trim() == ""){
+   alert("Username field cann't be empty!! Please Enter name!!!!");
+    document.forms["form"]["username"].focus();
+    usernamev = false;   
+ }else if(username == "iet"){
+   usernamev = true;
+ }else{
+    usernamev = false;
+ }
+
+  
+ if(password.trim() == ""){
+    alert("Password field is empty!!!");
+    document.forms.form.password.focus();
+    passwordv = false;
+ }
+ else if(8 < password.length  < 12 && password == "iet" ){
+    passwordv = true;
+ }
+ else if(password.length > 12 ){
+ alert("Password is less than 8 charcter.Password length should be 8 ");
+ document.forms.form.password.focus();
+ passwordv = false;
+ }
+ else{
+    passwordv = false;
+    document.forms.form.password.focus();
+ }
+ 
+ 
+
+
+
+ return usernamev && passwordv; 
+ }
+
+
+
+</script>
+
+
+
+    </body>
+</html>

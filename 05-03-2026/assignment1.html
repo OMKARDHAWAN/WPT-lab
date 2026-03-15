@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Assignment no 1</title>
+    </head>
+    <body>
+        <!-- 
+1)  add 4 paragraph in your html page  
+	id should be p1 , p2 , p3 , p4
+
+Display  Color Input and Button on Html Page 
+On Button Click change paragraph font color 
+and font style should be bold  -->
+
+<div>
+
+<p id="p1">
+Yellow Sunflowers
+Some examples of yellow sunflowers include American Giant, Zohar and Elegance. These sunflower types are vibrant and sure to make you smile. The American Giant sunflower can grow up to 14 feet tall, so “giant” may be an understatement. This species is one of the tallest sunflowers and their faces can reach 12 inches wide.           
+As the nursery rhyme taught us, roses are red. In addition to roses, many types of flowers are red, including some sunflowers. Red sunflowers come in different varieties. Some of them have similar daisy-like heads which are often born of the common yellow sunflowers. Additionally, red sunflowers are an excellent way to add a pop of color in a bouquet. 
+A common “purple sunflower” is the Chianti Hybrid. A Chianti Hybrid’s petals have deep, dark reds which some classify as purple. This sunflower plant can grow to five feet and has no pollen, making it good for cutting. These sunflowers can help balance color in mixed bouquets.  
+<p>
+
+
+<p id="p2">
+It’s an incredible 17th straight month of year-on-year gains in South Africa with February volumes up 11.4% to 53,455. This is believed to be the highest February volume in South African history, eclipsing the previous best of 53,220 hit in February 2013. The year-to-date tally is up 9.9% to 103,976. However exports crash -28.1% to just 24,221.
+
+Toyota (+4.5%) trails the market but remains by far the most popular manufacturer in the country with 23% share. It is followed by Suzuki (+8.6%) and the VW Group (-6.7%), in difficulty. Hyundai (+2%) and Ford (+1%) are muted and complete the Top 5. We have a raft of great gainers below, including Chinese Jetour (+266.9%) – reaching a new volume record at 1,673 and equalling its best ever share at 3.1%, Omoda+Jaecoo (+68%), GWM (+52.9%) and Chery (+20.2%). Mahindra (+24%) and Kia (+17.1%) also impress.
+
+Model-wise, the Toyota Hilux (+25.3%) cements its lead to 6.3% share, with the #2 this month being the Suzuki Swift (+6.7%), up two spots on January. The Ford Ranger (-3.6%) and VW Polo Vivo (-7.4%) are knocked down one spot each to #3 and #4. The Toyota Vitz (+117.6%) and Chery Tiggo 4 Pro (+57.7%) sport the biggest lifts in the Top 10 and rank #9 and #6 respectively. 
+<p>
+
+<p id="p3">
+StanceBeam, a leading sports technology start-up based in India, has teamed up with India's No.1 wearables brand boAt to launch StanceOS - advanced smart sensors and sports motion sensing AI technology in smartwatches. The timing of this innovation is perfect, as it coincides with the IPL season and the upcoming cricket world cup. With this innovation, young players will have access to cricket analytics, which could be instrumental in identifying the next wave of cricket talent.
+StanceBeam's revolutionary sports technology will provide boAt smartwatch users with unparalleled insight into their cricket performance, progression, and analytics of their batting and bowling. This innovation will benefit cricket players and coaches of all levels and age groups by providing game insights and improvement tips based on metrics such as bowling arm speed, bat speed, and other key indicators. StanceOS is enabling more professional and amateur players to access a new level of cricket analytics through quick and easy adoption by powering the smartwatch ecosystem. Currently, StanceOS is available for newly launched premium segment watches such as boAt Lunar Connect Pro and Lunar Call Pro. StanceBeam's vision is to make sports analytics and fan engagement accessible and pervasive by powering the smartwatch ecosystem.
+<p>
+
+
+<p id="p4" >
+A CTO in Singapore sits across the boardroom table, presented with a question that could shape the company’s future: “Are we fully compliant?” – and are we building this next phase on the right foundation?” Rather than discussing the newest frameworks or programming languages, the discussion points focus on trust, regulation, and whether the fintech development partner chosen to lead the next build can withstand scrutiny from the Monetary Authority of Singapore (MAS), as Technology Risk Management (TRM) expectations become more stringent. 
+Choosing a development partner has a direct influence on the company’s license, reputation, and valuation. A wrong choice leads to regulatory exposure and architectural debt. The right one becomes a competitive advantage. 
+<p>
+</div>
+
+
+<div>
+<h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Hello</h1>
+<input type="color" name="colorBox" id="color" style="font: bold;  " />
+<button type="button" onclick="Change()" >Change Colour and Change Font-size</button>
+</div>
+
+
+
+<script type="text/javascript">
+ let color = document.getElementById("color");
+ var p1 = document.getElementById("p1");
+ var p2 = document.getElementById("p2");
+ var p3 = document.getElementById("p3");
+ var p4 = document.getElementById("p4");
+ 
+ 
+ function Change(){
+   p1.style.color = color.value;
+   p1.style.fontWeight = "bold";
+   console.log(p1);
+   
+   p2.style.color = color.value;
+   p2.style.fontWeight = "bold";
+   
+   p3.style.color = color.value;
+   p3.style.fontWeight = "bold";
+   
+   p4.style.color = color.value;
+   p4.style.fontWeight = "bold";
+ }
+</script>
+
+    </body>
+</html>

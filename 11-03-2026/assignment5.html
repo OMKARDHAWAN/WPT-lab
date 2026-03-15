@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Assignment no 5</title>
+    </head>
+    <body>
+        <input type="date" id="birthdate" />
+		<button onclick="findAge()">Submit</button>
+		 <h1 id="h1"></h1>
+	<script type="text/javascript">
+	
+	function findAge(){
+	 var birthdate = document.getElementById("birthdate");
+	 var currentDate = new Date();
+	 var birthYear = birthdate.value.slice(0,4);
+	 var todayYear = currentDate.getFullYear();
+	 var age = todayYear - birthYear;
+	 var h1 = document.getElementById("h1");
+	 h1.innerText = "Current age of user is :" + age + " year";
+	 
+	}
+	
+    </script>	
+    </body>
+</html>

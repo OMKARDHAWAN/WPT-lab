@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Assignment no 3</title>
+    </head>
+    <body>
+        <div>
+            <label for="">Enter The number </label>
+            <input type="number" id="number" />
+			<button type="button" onclick="check()">Check</button>
+			<button type="button" onclick="addElement()">Add to End</button>
+
+           <label for="">Enter the index</label>
+            <input type="number" id="index" />
+			<button type="button" onclick="addElementAtIndex()">Add</button>
+               
+            <label for="">Enter the index to Delete Array Element : </label>
+            <input type="number" id="index1" />
+			<button type="button" onclick="deleteElementAtIndex()">Remove</button>
+		 
+		 
+        </div>
+
+<div>
+<fieldset>
+<legend>Output :</legend>
+<p id="output"></p>  
+<p id="output2"></p>
+<p id="output3"></p>
+</fieldset>
+</div>
+		
+		
+	<script type="text/javascript">
+	let array = [];	
+	//function for adding element at last index
+	;
+	function addElement(){
+	//picking value inserted in input element ;
+	
+	
+	var input = document.getElementById("number");
+	var ouput = document.getElementById("output");
+	//adding element at last index;
+	let number = parseInt(input.value);
+	array.push(number);
+	//displaying Element is added in arrray;
+	output.innerText = "Element is added in array";
+	
+	};
+	
+	//function to check if Element is present or not;
+	function check(){
+
+	var input = document.getElementById("number");
+	var ouput = document.getElementById("output");
+	let number = parseInt(input.value);
+	//check whether array is empty or not;
+	 if(array == ""){
+	 output.innerText = "Array is empty please add element in array!!!";
+	 };
+	
+    if(array.includes(number)){
+	 output.innerText = "Element Found!!!!";
+	}else{
+	 output.innerText = "Element not Found!!!";
+	}	
+	
+	
+	
+	
+};	
+
+
+function addElementAtIndex(){
+ var input = document.getElementById("number");
+ var index = document.getElementById("index");
+ var output = document.getElementById("output2");
+ let number = parseInt(input.value);
+ let index1 = parseInt(index.value);
+ array.splice(index1,0,number);
+  
+ // array.push(index.value,input.value);
+ output.innerText = "Arrray Element are : " + "[" + array + "]";
+ 
+}
+
+function deleteElementAtIndex(){
+  
+  var index = document.getElementById("index1");
+  var output = document.getElementById("output3");
+  let number = parseInt(index.value); 
+  array.splice(number,1);
+  output.innerText = "Arrray Element are : " + "[" + array + "]";
+}
+
+
+	
+	
+    </script>	
+    </body>
+</html>

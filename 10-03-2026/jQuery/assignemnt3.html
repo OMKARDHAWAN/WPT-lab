@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Assignment no 1</title>
+
+<script src="jquery-4.0.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#Start").click(function(){
+  $("#div1").animate({    
+    left:"1000px",
+    // right:"0px",
+    height: '150px',
+    width: '150px',
+  },1000);
+});
+// $("#Stop").click(function(){
+//     $("#div1").stop();
+// })
+
+
+
+});
+    
+</script>
+<style>
+
+    /* @keyframes move {
+        from {
+            background-color: red;
+            top: 50px;
+            }
+            to{
+                background-color: blue;
+                top: 100px;
+                }
+                } */
+                </style>
+
+    </head>
+
+    <body>
+        <div style="position: relative; background-color: red; width: 100px; height: 100px; animation-duration: 15s;" id="div1"></div>
+       <button id="Start" style="position: absolute; top:200px ; left:10px" >Start</button>
+       <!-- <button id="Stop"  style="position: absolute; top:200px ; left:50px" >Stop</button> -->
+    </div>
+    </body>
+</html>

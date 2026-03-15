@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Assignment no 1</title>
+    </head>
+    <body>
+ <!-- Explore different type of functions which discused in lecture -->
+<script type="text/javascript">
+         //normal function
+        function display(){
+            console.log("Normal function is called !!!");
+        }
+        // parameterised function
+        function sub(value){ 
+            console.log("Parametersied function is called !!!");
+            console.log("Hii",value );
+        }            
+
+        //function with default parameter
+        function show( name = "John"){ 
+            console.log("function with default parameter function is called !!!");
+            console.log("Hii",name);
+        }            
+        
+
+        //function with value args
+        function add(...value){ 
+        var array = value;
+        var  sum = 0;
+        for(var i = 0 ; i < array.length ; i++){
+           sum += array[i];
+        }
+        console.log(" Function with varArgs is called !!!");
+        console.log("sum of value receive using varArgs : ",sum);
+        }
+
+        // function with return value;
+        function square(n){    
+            return (n * n);
+        }
+        
+       
+
+       //normal function is called;
+        display();
+       
+        //parameterised function is called;
+        sub("John");
+        
+        //function with default value; 
+        show();
+        
+        //function with varargs
+        add(10,20,30);
+        
+        //function with return value
+        let data = square(3);
+        console.log("Returned value of return function is  : ", data);
+        
+        let annoumus = function (){
+            console.log("Function with no name is called !!!");
+        }
+        
+        console.log(annoumus());
+        
+
+        </script>
+    </body>
+</html>

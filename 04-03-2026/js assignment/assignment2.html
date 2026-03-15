@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Assignment no 2</title>
+</head>
+
+<body>
+<!-- take 1 text field and 2 buttons add and display 
+    on click on add button add the contents of textfield in array 
+	on click on Display button display array data on html page 
+		in UL list format -->
+
+<!--------------------------------------------  ------------------------------------>
+    <div>
+        <input type="text" id="textField" />
+        <button style="border: 1px solid black;padding: 
+            15px ; border-radius: 10px; " type="button" onclick="AddElement()">
+            Add
+        </button>
+        <button type="button" onclick="Display()" style="border: 1px solid black;padding: 
+            15px ; border-radius: 10px; ">
+            Display
+        </button>
+    </div>
+
+    <ul id="list" >
+
+    </ul>
+    <script type="text/javascript">
+        let data = [];
+        function AddElement() {
+            var textField = document.getElementById("textField").value;
+            data.push(textField);
+        }
+
+        function Display() {
+            var ul = document.getElementById("list");
+            var li = document.createElement("li");
+            li.innerText = data;
+            ul.appendChild(li);
+            data = [];
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>
+Assingment no 4
+</title>
+</head>
+<body>
+<div>
+<h3>Insert Number :</h3>
+<input type="number" id="input"/>
+<button onClick="getSquare()">Get Square</button>
+<h3 id="output"></h3>
+</div>
+<script type="text/javascript">
+  function getSquare(){
+   var input = document.getElementById("input").value;
+   var square = input * input;
+   document.getElementById("output").innerText = "Square of the " + input + " is : " + square; 
+  }
+</script>
+</body>
+</html>

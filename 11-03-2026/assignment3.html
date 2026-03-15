@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Assignment no 3</title>
+    </head>
+    <body>
+        <label for="input">Enter Name:</label>
+        <input type="text" id="input"  maxlength="6" minlength="3" required/>
+        <button type="button" onclick="validate()" >Validate</button> &nbsp; &nbsp; <span id="span"></span>
+    
+       
+    <script type="text/javascript">
+
+     function validate(){
+
+        // console.log("Validation is called!!!");
+
+        var input = document.getElementById("input");
+        var span = document.getElementById("span");
+       
+        // console.log(input.validity. = "hi");
+        if(input.validity.valueMissing){
+            span.innerText = " " + input.validationMessage ;
+        }else if(input.validity.tooShort){
+            span.innerText =   input.validationMessage;
+        }
+     }
+    </script>
+    </body>
+</html>

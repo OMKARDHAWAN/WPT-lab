@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Assignment no 3</title>
+    </head>
+    <body>
+        <!-- 3) 
+define 2 objects which contain variables 
+
+and add print function inside objects using prototype  -->
+        <h3>Please Check Console for Result:</h3>
+        <script type="text/javascript">
+          
+       Object.prototype.print = function (...value){
+        console.log("Roll No :" , value[0]);
+        console.log("Name:",value[1]);
+       }
+    let Student1 = {
+     id : 1
+    }
+
+    let Student2 = {
+        id : 2
+    }
+    
+    Student1.print(Student1.id,"Ram");
+    Student2.print(Student2.id,"Rahul");
+     
+
+
+
+
+
+        </script>
+    </body>
+</html>

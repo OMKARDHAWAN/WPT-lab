@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Assignment no 3
+        </title>
+    </head>
+    <body>
+<!-- Email validation -->
+     <div>
+        <h3>Enter Email id :</h3>
+        <input type="email" id="email"/>
+        <button type="button" onclick="Verify()">Verify</button>
+     </div>
+
+        <script type="text/javascript">
+         function Verify(){
+            var email = document.getElementById("email").value;
+            var indexOfAt_the_rate = email.indexOf('@');
+            var indexOfDot = email.lastIndexOf('.');
+           console.log(indexOfAt_the_rate);
+           console.log(indexOfDot);
+
+           if(indexOfAt_the_rate < indexOfDot){
+            console.log("Email is in correct format!!!");
+           }else{
+            console.log("Email is not in correct format!!!!");
+           }
+
+
+         }
+        </script>
+    </body>
+</html>

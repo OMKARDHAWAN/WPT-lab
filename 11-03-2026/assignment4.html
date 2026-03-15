@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Assignment no 4</title>
+</head>
+
+<body>
+
+        <label for="id">ID:</label>
+        <input type="number" id="id" />
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <button type="button" onclick="submit()">Submit</button>
+
+        <table border="" style="width: 200px; border-collapse: collapse; margin-top: 30px;">
+            <caption>Student Data</caption>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td id="tableid"></td>
+                <td id="tablename"></td>
+            </tr>
+        </table>
+    <script type="text/javascript">
+
+        function submit() {
+            var userid = document.getElementById("id");
+            var username = document.getElementById("name");
+            var id = document.getElementById("tableid");
+            var name = document.getElementById("tablename");
+            
+
+
+            const data = {
+                id,
+                name
+            };
+            data.id = userid.value;
+            data.name = username.value;
+            
+            console.log(data.id);
+            console.log(data.name);
+               id.innerText = data.id;
+               name.innerText = data.name;
+        }
+
+
+    </script>
+</body>
+
+</html>

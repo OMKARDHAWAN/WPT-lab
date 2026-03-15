@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>
+ Assignment no 1
+</title>
+</head>
+
+<body>
+
+
+   <table border="1" style="border-collapse: collapse;" id="table">
+      <caption>Items</caption>
+      <tr><th>Id</th><th>Title</th><th>Price</th></tr>
+          
+   </table>
+ <p id="p1"></p>
+
+<script type="text/javascript">
+ var tr = document.createElement('tr');
+ var td = document.createElement('td');
+ var table = document.getElementById('table');  
+var p1 = document.getElementById('p1');
+
+ 
+
+// let xhttp = new XMLHttpRequest();
+
+// xhttp.open("GET","https://fakestoreapi.com/products");
+
+// xhttp.send();
+
+// xhttp.onreadystatechange = function(){
+//  if(this.readyState == 4 && this.status == 200){
+// let arrayOfData = JSON.parse(this.responseText); 
+
+// for(var i = 0; i < arrayOfData.length ; i++){
+//    console.log(arrayOfData[i].id);
+ 
+// }
+
+//  }}
+ 
+
+   //  const table = document.getElementById('table');
+   //  const p1 = document.getElementById('p1');
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "https://fakestoreapi.com/products", true);
+    xhttp.send();
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState === 4) {
+        if (this.status === 200) {
+          let arrayOfData = JSON.parse(this.responseText);
+          
+          arrayOfData.forEach(item => {
+            const tr = document.createElement('tr');
+
+            const tdId = document.createElement('td');
+            tdId.textContent = item.id;
+            tr.appendChild(tdId);
+
+            const tdTitle = document.createElement('td');
+            tdTitle.textContent = item.title;
+            tr.appendChild(tdTitle);
+
+            const tdPrice = document.createElement('td');
+            tdPrice.textContent = '$' + Number(item.price).toFixed(2);
+            tr.appendChild(tdPrice);
+
+            table.appendChild(tr);
+          });
+
+        }
+      }
+    };
+
+
+   //  const apiUrl = 'https://fakestoreapi.com/products';
+   //  const statusEl = document.getElementById('status');
+   //  const tbody = document.querySelector('#productTable tbody');
+
+   //  // Fetch data
+   //  fetch(apiUrl)
+   //    .then(response => {
+   //      if (!response.ok) throw new Error('Network error: ' + response.status);
+   //      return response.json();
+   //    })
+   //    .then(products => {
+   //      statusEl.textContent = `Loaded ${products.length} products.`;
+   //      products.forEach(product => {
+   //        const tr = document.createElement('tr');
+
+   //        const tdId = document.createElement('td');
+   //        tdId.textContent = product.id;
+   //        tr.appendChild(tdId);
+
+   //        const tdTitle = document.createElement('td');
+   //        tdTitle.textContent = product.title;
+   //        tr.appendChild(tdTitle);
+
+   //        const tdPrice = document.createElement('td');
+   //        tdPrice.textContent = '$' + Number(product.price).toFixed(2);
+   //        tr.appendChild(tdPrice);
+
+   //        tbody.appendChild(tr);
+   //      });
+   //    })
+      // .catch(err => {
+      //   statusEl.textContent = 'Error loading products: ' + err.message;
+      // });
+</script>
+</body>
+</html>
