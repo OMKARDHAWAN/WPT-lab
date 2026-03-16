@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Assignment no 3</title>
+        
+    </head>
+    <!-- 3) https://jsonplaceholder.typicode.com/todos
+using above api create post mehod in ajax concept -- accept data from user for post  -->
+<body>
+
+    <input type="text" id="name"   />
+    <input type="text" id="surname"/>
+    <input type="text" id="rollno" />
+    <button onclick="getData()">
+      Submit
+    </button>
+
+    <p id="example">
+
+    </p>
+    <script type="text/javascript">
+    
+    
+function getData(){
+let xhttp = new XMLHttpRequest();
+    
+    const data = {
+     name : document.getElementById("name").value,
+     surname : document.getElementById("surname").value,
+     rollno : document.getElementById("rollno").value
+    }
+
+
+    xhttp.open("POST","https://jsonplaceholder.typicode.com/todos", true);
+    xhttp.setRequestHeader('Content-type', 'application/json'); 
+    xhttp.send(JSON.stringify(data));
+
+    xhttp.onreadystatechange = function PostData(){
+       if(this.readyState == 4 && this.status == 201){
+        document.getElementById("example").innerText = this.responseText;
+        console.log("Data Post Successfully!!!!");
+       }
+       console.log("Error Found Successfully");
+    }
+}
+
+
+
+
+//  function sendRecords() {
+//             // Creating XMLHttpRequest object
+//             var zhttp = new XMLHttpRequest();
+
+//             //  document  object   
+//             const mParameters = {
+//                 title: document.querySelector('#Utitle').value,
+//                 userid: document.querySelector('#UId').value,
+//                 body: document.querySelector('#Ubody').value
+//             }
+//             // Creating call back function
+//             zhttp.onreadystatechange = function () {
+//                 if (this.readyState == 4 && this.status == 201) {
+//                     document.getElementById("example").innerHTML = this.responseText;
+//                     console.log("Data Posted Successfully")
+//                 }
+//                 console.log("Error found")
+//             };
+//             // Post/Add JSON document on the given API
+//             zhttp.open("POST", "https://jsonplaceholder.typicode.com/todo", true);
+//             // Setting HTTP request header   text/html   webservice  rest 
+//             zhttp.setRequestHeader('Content-type', 'application/json')
+//             // zhttp.send()//  get   --  html 
+//             // Sending the request to the server  object   --- json 
+//             zhttp.send(JSON.stringify(mParameters));
+//         }
+    
+
+    </script>
+</body>
+</html>

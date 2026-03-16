@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Assignment no 2</title>
+    </head>
+    <!-- 2)  declare 1 variable which contains data for 
+    Object format convert that data in json format
+    and again in Object Format  -->
+    <body>
+        <h1>Kindly check console to see output!!!</h1>
+        <script type="text/javascript">
+         let data = {
+            name : "john",
+            rollno : 1
+         }
+         let jsonData = JSON.stringify(data);
+         console.log("Object format converted into Json format  : ",jsonData);
+
+         let objectData = JSON.parse(jsonData);
+         console.log("Json data converted into Object data : ",objectData);
+
+        </script>
+    </body>
+</html>
