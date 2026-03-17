@@ -22,8 +22,7 @@ in your code
    normal function 
    setTimeout
    Promise
-   Console.log()
-
+   console.log()
 and understand execution sequence 
 
 Extra Assignment 

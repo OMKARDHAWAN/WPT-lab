@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Assignment no 3</title>
+</head>
+<!-- 3)In assignment 1 code add 
+     result function which accept 2 parameters 
+     result(error , result)
+    and add condition check in divide & multiplication function 
+   if 2nd parameter is zero display error message -->
+
+<body>
+    <script type="text/javascript">
+
+function result(error,result){
+    if(error){
+        console.log(error.message);
+    }else{
+        console.log(" Result :" + result);
+    }
+}
+
+
+        function multiplication(a, b,callback) {
+            
+                if (b == 0) {
+                    callback(new Error("Multiplication is not possible"),null);
+                } else {
+                    return callback(null,a*b);
+                }
+            
+        }
+
+
+        function division(a, b,callback) {
+            
+                if (b == 0) {
+                    return callback(new Error("Division is not possible"),null);
+                } else {
+                    return callback(null,a/b);
+                }
+            
+        }
+
+        
+
+multiplication(10,3,result);//result
+multiplication(10,0,result);//error message 
+division(20,5,result);//result 
+division(20,0,result);//error
+
+    </script>
+</body>
+
+</html>

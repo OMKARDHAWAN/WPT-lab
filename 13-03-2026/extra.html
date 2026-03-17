@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Assignment 5</title>
+    </head>
+    <!-- 2) from html accept 
+    FirstName  textfield
+    LastName  textfield
+    birthDate    <input type="date"/>
+
+	
+  on button click <generate username>
+Generate UserName  as follows and display in P Tag 
+    first 2 characters from firstname 
+    +age+last2characters from lastname  -->
+    <body>
+
+ <label for="firstname">FirstName</label>
+ <input type="text" id="firstname"/>
+ <label for="lastname">Lastname</label>
+ <input type="text" id="lastname"/>
+ <label for="birthDate">BirthDate</label>
+ <input type="date" id="birthDate" />
+ <button type="button" onclick="genrate()">Generate Password</button>
+<h3>Password generated :</h3>
+<p id="output"></p>
+
+
+<script type="text/javascript">
+ 
+ function genrate(){
+  var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
+  var birthDate = document.getElementById("birthDate").value;
+  var Password = "";
+  var currentDate = new Date();
+  const birthYear = parseInt(birthDate.slice(0,4));
+
+  let age = currentDate.getFullYear() -  birthYear;
+
+  Password += firstname.slice(0,2) + lastname.slice(0,2) + age;
+
+  document.getElementById("output").innerText = Password;
+
+
+ }
+
+</script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>assignment no 1 </title>
+    </head>
+    <!-- 1) write a function addition, multiplication 
+                              division , subtraction which accepted 2 parameters   
+	write result function which accept 3 parameters 
+     
+               result (a1 , a2 , callback)
+
+pass callback parameters while calling  -->
+    <body>
+        
+
+     <script type="text/javascript">
+      
+      
+      function addition(a1,a2){
+        var a = a1;
+        var b = a2;
+        var result = a+b;
+        console.log(result);
+      }
+
+      function multiplication(a1,a2,callback){
+        var result = a1 * a2;
+        console.log(result); 
+      }
+
+      function division(a1,a2){
+        var result = a1 / a2;
+        console.log(result);
+      }
+
+
+    function subtraction(a1,a2){
+        var result = a1 - a2;
+        console.log(result);
+    }
+
+
+     function result(a1,a2,callback){
+        return callback(a1,a2);
+     }
+     
+
+console.log(result(20,10,subtraction));
+
+
+     </script>   
+    </body>
+</html>
