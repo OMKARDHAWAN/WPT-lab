@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Assignment no 1 </title>
+    </head>
+    <!-- 
+1) Using Jquery write an html that has a button-OK . When button is clicked
+display hello in atag Display italics hello in anothertag Distplay underline hello in third -->
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+    $('document').ready(function(){
+      $('#btn').click(function(){
+       $('#h1').text("Hello");
+      $("#h2").text('Hello').css("font-style","italic");
+      $("#h3").text('Hello').css("text-decoration","underline");
+      })
+    })
+    </script>
+    <body>
+        <button id="btn">Ok</button>
+      <h1 id="h1"></h1>
+      <h1 id="h2"></h1>
+      <h1 id="h3"></h1>
+    </body>
+</html>

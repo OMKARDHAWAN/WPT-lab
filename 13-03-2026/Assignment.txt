@@ -1,4 +1,5 @@
 Node JS
+//callback function to handle asnyc programming
 1) write a function addition  , multiplication 
                               division , subtraction which accepted 2 parameters   
 	write result function which accept 3 parameters 
@@ -9,6 +10,8 @@ pass callback parameters while calling
 
 2) Understande and write nested call back function (as shown in lecture)
 
+
+//error handling using callback
 3) In assignment 1 code add 
    result function which accept 2 parameters 
     result(error , result)

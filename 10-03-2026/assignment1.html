@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Assingment no 1</title>
+    </head>
+    <body>
+        <!-- 1) take array of 10 elements 
+
+display array as it is 
+
+and use predefined methods of array and display 
+
+only even numbers , odd numbers and display whole array 
+in sorted way  -->
+
+<h1>Kindly Check Console for Output!!!</h1>
+
+
+        <script type="text/javascript">
+
+let array = [12,34,25,56,33,102,23,48];
+
+console.log("Array Element are :" + array);
+
+let evenNumber =[];
+let oddNumber = [];
+evenNumber = array.filter((num)=> num %2 == 0);
+console.log("Even number present in array is : ",evenNumber);
+oddNumber = array.filter((num)=> num % 2 != 0);
+console.log("Odd number present in array is : ",oddNumber);
+
+let sortedArray = [];
+sortedArray = array.sort((num1,num2)=> num1 > num2);
+console.log("Sorted Array :",sortedArray);
+
+
+
+        </script>
+    </body>
+</html>

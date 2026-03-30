@@ -1,0 +1,54 @@
+<html>
+    <title>Assingment no 5</title>
+    <body>
+     <div>
+        <input type="textfield" id="textfield"/>
+        
+        <input type="radio" name="radio" value="uppercase"/>
+        <label for="Uppercase">Uppercase</label>
+        <input type="radio" name ="radio" value="lowercase" />
+        <label for="Lowercase">Lowercase</label>
+        <input type="radio" name= "radio" value="asitis"/>
+        <label for="asitis">Asitis</label>
+
+        <button type="button" onclick="Show()">
+            Display
+        </button>
+
+     </div>
+
+     <div>
+        <p id="output" ></p>
+     </div>
+    
+
+     <script type="text/javascript">
+      function Show(){
+     var textfield = document.getElementById("textfield").value;
+     var radio = document.getElementsByName("radio");
+     var Fontstyle ;
+     var output =document.getElementById("output");
+     output.innerText = textfield;   
+     for(let i = 0; i < 3  ; i++){
+        if(radio[i].checked){
+            Fontstyle = radio[i].value;
+            output.style.textTransform = Fontstyle;
+        }
+     }
+
+
+    
+    
+
+
+    //select radio button
+    //which one is checked 
+    //apply styling
+
+
+
+      }
+     </script>
+
+    </body>
+</html>

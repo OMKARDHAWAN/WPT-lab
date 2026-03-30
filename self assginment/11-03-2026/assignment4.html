@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            
+            $("h1").click(function(){
+                $(this).css("display","none");
+            });
+			
+			$("h2").click(function(){
+                $(this).css("display","none");
+            });
+
+            $(document).mousemove(function(){
+                $("#mouse").text(
+                    "position X: " + event.pageX + 
+                    " , position Y: " + event.pageY
+                );
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<h1 style="display:block">Display1</h1>
+<h2 style="display:block">Display2</h2>
+
+<p id="mouse">mouse pointer</p>
+
+</body>
+</html>
